@@ -2,8 +2,27 @@
 <html>
 <head>
   <title> </title>
+  <meta charset="utf-8">
+  <%= wicked_pdf_stylesheet_link_tag "pdf" -%>
+  <%= wicked_pdf_javascript_include_tag "number_pages" %>
 </head>
 <body>
-  <h1> Hello PDF World</h1>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 700px; font-size:60px;">Nombre del Producto</th>
+        <th style="width: 700px; font-size:60px;">Precio</th>
+      </tr>
+      </thead>
+
+      <tbody>
+        <% @products.each do |product| %>
+          <tr>
+            <td style="font-size:60px;"><%= product.title %></td>
+            <td style="font-size:60px;"><%= product.pricing %></td>
+          </tr>
+        <%end%>
+      </tbody>
+  </table>
 </body>
 </html>
