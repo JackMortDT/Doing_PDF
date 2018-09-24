@@ -7,14 +7,13 @@
   <%= wicked_pdf_javascript_include_tag "number_pages" %>
 </head>
 <body>
-  <table>
-    <thead>
+  <table class="table table-striped">
+    <thead class="thead-light">
       <tr>
-        <th style="width: 700px; font-size:60px;">Nombre del Producto</th>
-        <th style="width: 700px; font-size:60px;">Precio</th>
+        <th style="width: 700px; font-size:60px;" scope="col">Nombre del Producto</th>
+        <th style="width: 700px; font-size:60px;" scope="col">Precio</th>
       </tr>
       </thead>
-
       <tbody>
         <% @products.each do |product| %>
           <tr>
